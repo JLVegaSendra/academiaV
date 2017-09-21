@@ -18,11 +18,11 @@
 
 <body>
 
-	{% include './templates/cabecera.html' without context %}
+	{% include 'cabecera.html' without context %}
 	<div class="parallax-container">
 		<div class="parallax">
 			<img
-				src="{{ url_for('static', filename='images/fondomatematicas.jpg')}}"></img>
+				src="{{ url_for('static', filename='images/fondoMatematicas.jpg')}}"></img>
 		</div>
 	</div>
 	<br />
@@ -113,7 +113,7 @@
 
 	</div>
 
-	<br /> {% include './templates/footer.html' without context %}
+	<br /> {% include 'footer.html' without context %}
 
 	<!--  Scripts-->
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
