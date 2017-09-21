@@ -1,1 +1,1 @@
-web: gunicorn run.py chat:app
+web: gunicorn run:application
