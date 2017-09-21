@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% block head %}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% block title %}{% endblock %}Academia Vega</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="{{ url_for('static', filename='css/materialize.css')}}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+<link href="{{ url_for('static', filename='css/style.css')}}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+{% endblock %}
+</head>
+
+<body>
+
+	{% include './templates/cabecera.html' without context %}
+	<div>
+		<div class="parallax-container">
+			<div class="parallax">
+				<img
+					src="{{ url_for('static', filename='images/fondomatematicas.jpg')}}"></img>
+			</div>
+		</div>
+		<br/>
+		<div class='row'>
+			<div class='col s5  offset-s1 brown-text text-darken-4'>
+				<h4>Contacto</h4>
+				<p class='justify brown-text text-darken-4'>Puedes contactar con
+					nosotros de Lunes a Viernes entre las 10:00-13:00 o de 17:00-19:30
+					en el telefono 91 549 73 95 o bien personalmente en nuestra
+					oficina.</p>
+				<p class='justify brown-text text-darken-4'>Si lo deseas tambien
+					puedes consultarnos cualquier informacion llamando al 649 53 15 53
+					o mediante nuestro Whatsapp.</p>
+				<a href="https://api.whatsapp.com/send?phone=649531553"
+					class="waves-effect waves-light btn"><i
+					class="material-icons right">call</i>Whatsapp</a>
+			</div>
+			<div class='col s5 offset-s1'>
+				<iframe
+					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.6979853518424!2d-3.7151537846034364!3d40.43768597936267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42285ca48b7b37%3A0x89c6971cca968515!2sAcademia+Vega!5e0!3m2!1ses!2ses!4v1501579230437'
+					width='400' height='300' frameborder='0' style='border: 0'
+					allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<br/>
+	{% include './templates/footer.html' without context %}
+
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="{{ url_for('static', filename='js/materialize.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/init.js')}}"></script>
+	<script type="text/javascript">
+		$(".dropdown-button").dropdown();
+	</script>
+</body>
+
+</html>

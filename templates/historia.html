@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% block head %}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% block title %}{% endblock %}Academia Vega</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="{{ url_for('static', filename='css/materialize.css')}}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+<link href="{{ url_for('static', filename='css/style.css')}}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+{% endblock %}
+</head>
+
+<body>
+
+	{% include './templates/cabecera.html' without context %}
+	<div id="cuerpo">
+		<div class="parallax-container">
+			<div class="parallax">
+				<img
+					src="{{ url_for('static', filename='images/fondomatematicas.jpg')}}"></img>
+			</div>
+		</div>
+		<br />
+		<div class='row'>
+			<div class='offset-s1 col s10 justify brown-text text-darken-4'>
+				<h4>¿Que es Academia Vega?</h4>
+				<p class='justify brown-text text-darken-4'>En academia Vega
+					ofrecemos clases de apoyo y refuerzo a estudiantes de Arquitectura
+					asi como de Ciencias matematicas y Fisicas.</p>
+				<p class='justify brown-text text-darken-4'>Durante mas de 30
+					años hemos ofrecido nuestros servicios a nuestros estudiantes
+					pertenecientes a la Universidad Politecnica de Madrid, Universidad
+					Rey Juan Carlos y complutense de madrid.</p>
+				<p class='justify brown-text text-darken-4'>Durante toda esta
+					trayectoria hemos cosechado una gran cantidad de triunfos con
+					nuestros alumnos gracias a nuestro personal de enseñanza asi como
+					por nuestro metods de enseñanza personalizada orientada a grupos
+					reducidos y con amplia disponiblidad de horarios. Gracias a esto
+					nuestra academia es ampliamente recomendad por nuestros resultados</p>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='offset-s1 col s10 justify brown-text text-darken-4'>
+				<h4>Metodologia</h4>
+				<p class='justify brown-text text-darken-4'>En academia Vega
+					ofrecemos clases de apoyo y refuerzo a estudiantes de Arquitectura
+					asi como de Ciencias matematicas y Fisicas.</p>
+				<p class='justify brown-text text-darken-4'>Durante mas de 30
+					años hemos ofrecido nuestros servicios a nuestros estudiantes
+					pertenecientes a la Universidad Politecnica de Madrid, Universidad
+					Rey Juan Carlos y complutense de madrid.</p>
+				<p class='justify brown-text text-darken-4'>Durante toda esta
+					trayectoria hemos cosechado una gran cantidad de triunfos con
+					nuestros alumnos gracias a nuestro personal de enseñanza asi como
+					por nuestro metods de enseñanza personalizada orientada a grupos
+					reducidos y con amplia disponiblidad de horarios. Gracias a esto
+					nuestra academia es ampliamente recomendad por nuestros resultados</p>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='offset-s1 col s10 justify brown-text text-darken-4'>
+				<h4>Profesorado</h4>
+				<p class='justify brown-text text-darken-4'>En academia Vega
+					ofrecemos clases de apoyo y refuerzo a estudiantes de Arquitectura
+					asi como de Ciencias matematicas y Fisicas.</p>
+				<p class='justify brown-text text-darken-4'>Durante mas de 30
+					años hemos ofrecido nuestros servicios a nuestros estudiantes
+					pertenecientes a la Universidad Politecnica de Madrid, Universidad
+					Rey Juan Carlos y complutense de madrid.</p>
+				<p class='justify brown-text text-darken-4'>Durante toda esta
+					trayectoria hemos cosechado una gran cantidad de triunfos con
+					nuestros alumnos gracias a nuestro personal de enseñanza asi como
+					por nuestro metods de enseñanza personalizada orientada a grupos
+					reducidos y con amplia disponiblidad de horarios. Gracias a esto
+					nuestra academia es ampliamente recomendad por nuestros resultados</p>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='offset-s1 col s10 justify brown-text text-darken-4'>
+				<h4>Instalaciones</h4>
+				<p class='justify brown-text text-darken-4'>En academia Vega
+					ofrecemos clases de apoyo y refuerzo a estudiantes de Arquitectura
+					asi como de Ciencias matematicas y Fisicas.</p>
+				<p class='justify brown-text text-darken-4'>Durante mas de 30
+					años hemos ofrecido nuestros servicios a nuestros estudiantes
+					pertenecientes a la Universidad Politecnica de Madrid, Universidad
+					Rey Juan Carlos y complutense de madrid.</p>
+				<p class='justify brown-text text-darken-4'>Durante toda esta
+					trayectoria hemos cosechado una gran cantidad de triunfos con
+					nuestros alumnos gracias a nuestro personal de enseñanza asi como
+					por nuestro metods de enseñanza personalizada orientada a grupos
+					reducidos y con amplia disponiblidad de horarios. Gracias a esto
+					nuestra academia es ampliamente recomendad por nuestros resultados</p>
+			</div>
+		</div>
+	</div>
+	<br /> {% include './templates/footer.html' without context %}
+
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="{{ url_for('static', filename='js/materialize.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/init.js')}}"></script>
+	<script type="text/javascript">
+		$(".dropdown-button").dropdown();
+	</script>
+	<script>
+		var aviso = document.getElementById('aviso');
+		aviso.onclick = function() {
+			alert("Esto es un aviso!!");
+		};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% block head %}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% block title %}{% endblock %}Academia Vega</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="{{ url_for('static', filename='css/materialize.css')}}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+<link href="{{ url_for('static', filename='css/style.css')}}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+{% endblock %}
+</head>
+
+<body>
+
+	{% include './templates/cabecera.html' without context %}
+	<div class="parallax-container">
+		<div class="parallax">
+			<img
+				src="{{ url_for('static', filename='images/fondomatematicas.jpg')}}"></img>
+		</div>
+	</div>
+	<br />
+	<div class='row'>
+		<div class='col s12 center brown-text text-darken-4'>
+			<h4>Academia Vega</h4>
+			<div class="container">
+				<div class="section">
+					<div class="row">
+						<div class="col s12 m12">
+							<div class="icon-block">
+								<p class="light">Durante el primer semestre contamos con las
+									asignaturas de Fundamentos Matematicos I y fundamentos Fisicos
+									I</p>
+								<p class="light">Durante el segundo semestre contamos con
+									las asignaturas de Fundamentos Matematicos II y fundamentos
+									Fisicos II</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class='row'>
+		<div class='col s12 center brown-text text-darken-4'>
+			<div class="container">
+				<div class="section">
+					<div class="row">
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i class="material-icons">flash_on</i>
+								</h2>
+								<h5 class="center">Universidad Complutense de Madrid</h5>
+								<p class="light">Durante el primer semestre contamos con las
+									asignaturas de Fundamentos Matematicos I y fundamentos Fisicos
+									I</p>
+								<p class="light">Durante el segundo semestre contamos con
+									las asignaturas de Fundamentos Matematicos II y fundamentos
+									Fisicos II</p>
+							</div>
+						</div>
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i class="material-icons">group</i>
+								</h2>
+								<h5 class="center">Universidad Rey Juan Carlos</h5>
+								<p class="light">En el primer semestre contamos con la
+									asignatura de Mecanica de Solidos</p>
+								<p class="light">En el Segundo semestre contamos con la
+									asignatura de Fundamentos Matematicos III y Sistemas
+									Estructurales</p>
+							</div>
+						</div>
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i class="material-icons">group</i>
+								</h2>
+								<h5 class="center">Universidad Politecnica de Madrid</h5>
+								<p class="light">En el primer semestre contamos con la
+									asignatura de Mecanica de Solidos</p>
+								<p class="light">En el Segundo semestre contamos con la
+									asignatura de Fundamentos Matematicos III y Sistemas
+									Estructurales</p>
+							</div>
+						</div>
+						<div class="col s12 m3">
+							<div class="icon-block">
+								<h2 class="center brown-text">
+									<i class="material-icons">group</i>
+								</h2>
+								<h5 class="center">Universidad San Pablo CEU</h5>
+								<p class="light">En el primer semestre contamos con la
+									asignatura de Mecanica de Solidos</p>
+								<p class="light">En el Segundo semestre contamos con la
+									asignatura de Fundamentos Matematicos III y Sistemas
+									Estructurales</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br /> {% include './templates/footer.html' without context %}
+
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="{{ url_for('static', filename='js/materialize.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/init.js')}}"></script>
+	<script type="text/javascript">
+		$(".dropdown-button").dropdown();
+	</script>
+</body>
+
+</html>
